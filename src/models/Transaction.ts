@@ -1,4 +1,5 @@
-import { v4 as uuid } from 'uuid';
+import { uuid } from 'uuidv4';
+// criação de um novo objeto da model
 
 class Transaction {
   id: string;
@@ -9,6 +10,7 @@ class Transaction {
 
   type: 'income' | 'outcome';
 
+  // retorna um novo objeto
   constructor({ title, value, type }: Omit<Transaction, 'id'>) {
     this.id = uuid();
     this.title = title;
